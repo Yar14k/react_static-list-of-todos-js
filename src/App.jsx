@@ -14,7 +14,7 @@ export const todos = todosFromServer.map(todo => ({
 }));
 
 export const App = () => {
-  let localTodos = todosFromServer.map(todo => ({
+  const localTodos = todosFromServer.map(todo => ({
     ...todo,
     user: usersFromServer.find(user => user.id === todo.userId),
   }));
